@@ -28,6 +28,8 @@ resource "aws_instance" "aws-cloud-automation-ec2" {
 
   vpc_security_group_ids = [aws_security_group.aws-cloud-automation-sg.id]
 
+  user_data = file("install.sh")
+
   tags = {
     Name = "aws-cloud-automation-ec"
     Owner = "terraform-aws-cloud-automation"
