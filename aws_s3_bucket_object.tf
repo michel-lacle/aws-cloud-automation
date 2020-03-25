@@ -3,6 +3,8 @@ resource "aws_s3_bucket_object" "aws-cloud-automation-bucket-object" {
   key = "hello.txt"
   source = "hello.txt"
 
+  acl = "public-read"
+
   tags = {
     Owner = "terraform-aws-cloud-automation"
     Project = "aws-cloud-automation-"
